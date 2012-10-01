@@ -1,0 +1,63 @@
+\subsection*{Unit Prefixes}
+\input{prefix}\\
+
+For example: 10$^{-2}$ m = 1 cm and 10$^{12}$ nm = 1 km. There is also another unit of length, which doesn't have a prefix, called the angstrom. One angstrom (1 \AA) = $10^{-10}$ meters = $10^{-1}$ nanometers. The angstrom is used a lot by astronomers when is comes to measuring wavelengths of light, but hopefully we will just use nanometers instead.
+
+\subsection*{Unit Conversions}
+\subsubsection*{Converting Time: A Quick example}
+	Here is an example of how to convert a year into seconds:
+	\begin{equation}\label{eqn:year2sec}
+	1\;\textrm{year}\times\frac{365\;\textrm{days}}{1\;\textrm{year}}\times\frac{24\;\textrm{hours}}{1\;\textrm{day}}\times\frac{60\;\textrm{minutes}}{1\;\textrm{hour}}\times\frac{60\;\textrm{seconds}}{1\;\textrm{minute}}=3.15\times 10^7\;\textrm{seconds}
+	\end{equation}
+	Notice how each successive step involves multiplying by one in a way that cancels out a unit from the previous step, leaving us with the desired unit of seconds.
+	$$1\;\cancel{\textrm{year}}\times\frac{365\;\cancel{\textrm{days}}}{1\;\cancel{\textrm{year}}}\times\frac{24\;\cancel{\textrm{hours}}}{1\;\cancel{\textrm{day}}}\times\frac{60\;\cancel{\textrm{minutes}}}{1\;\cancel{\textrm{hour}}}\times\frac{60\;\textrm{seconds}}{1\;\cancel{\textrm{minute}}}=365\times 24\times 60\times 60\; {\rm seconds}= 3.15\times 10^7\;\textrm{seconds}$$
+	
+	\subsubsection*{Converting velocity: An in Depth Example}
+	Now let's try converting the speed of light from the units of meters per second (m/s) to miles per hour (mph). To do this we first need to know what the speed of light is in meters per second. Fortunately this number is pretty easy to remember:
+	$$c=3\times10^8\;\textrm{m/s}.$$
+	Next we also need to know how to convert meters into miles,
+	$$1\;\textrm{mile}=1600\;\textrm{m}.$$
+	This piece of information tells us that we need to multiply by either
+	$$\dfrac{1600\; {\rm meters}}{1\; {\rm mile}} \qquad {\rm or} \qquad \dfrac{1\; {\rm mile}}{1600\; {\rm meters}}.$$
+To determine which, we need to look at the units of what we are starting with, in this case m/s. We want to get rid of meters which is on top so we need to multiply by something with meters on the bottom to cancel out that unit. So now we now the firs step:
+	$$c=\dfrac{3\times 10^8 \cancel{\rm meters}}{\rm second}\times \dfrac{1\; {\rm mile}}{1600\; \cancel{{\rm meters}}}$$
+	Now we have miles on top which is what we want. All that's left is to convert seconds into hours. We have seconds on the bottom of our expression which means we need to multiply by something with seconds on the top to cancel out. We also want hours to be on the bottom of our final expression, so we need to multiply by something with hours on the bottom. Additionally, we need to multiply by one, in other words we need to multiply by something where the top and bottom are equivalent. From our earlier conversion in equation \ref{eqn:year2sec}, we can see that 1 hour = 3600 seconds. Thus our final step gives us the following:
+	$$c=\dfrac{3\times 10^8 \cancel{\rm meters}}{\cancel{\rm second}}\times \dfrac{1\; {\rm mile}}{1600\; \cancel{{\rm meters}}}\times\dfrac{3600\;\cancel{\textrm{seconds}}}{1\;\textrm{hour}}=6.75\times10^8\;\textrm{mph}.$$
+	
+\subsection*{The Small Angle Formula}
+\subsubsection*{What is a Small Angle?}
+Before we can begin to use the small angle formula we must first understand what small angles are, and how they are measured.
+A right angle (90 degrees) is a pretty large angle, but imagine splitting that into 90 equal angles and looking at just one of them.
+You would now be looking at one degree, which is itself a pretty small angle.
+However, as far as astronomers are concerned one degree is very large.
+The largest single object in the night's sky, the moon, is only half a degree wide.
+Jupiter, the second largest object in our solar system currently (October 1st, 2012) has an angular diameter of about one hundredth of a degree (it's angular size changes because it's distance from us changes).
+However, astronomers use the angular units arcminutes and arcsecond to measure angles which are smaller than one degree, for example Jupiter's angular diameter is currently 41.7 arcseconds (or 41.7\arcsec).
+There are 60 of these arcseconds in one arcminute and there are 60 arcminutes in one degree. 
+Seeing as the size of Jupiter is only {41.7\arcsec} it makes sense that astronomers use the arcsecond as the primary unit for measuring angles.
+
+\subsubsection*{The Formula}
+
+The small angle formula is really just an approximation of trigonometry that works for small angles, hence the name.
+Fortunately this approximation makes the calculations much simpler and avoids the use trigonometric functions. The small angle formula (listed below) relates the physical size of the object ($D$) to the angular size of the object in arcseconds ($\alpha$), and the distance to the object ($d$).
+\begin{equation} \label{eqn:small_angle}
+D=\frac{\alpha d}{206,265}
+\end{equation}
+Keep in mind that $d$ and $D$ need to be in the same unit, but as long as they are both in same unit of length it does not matter what unit they are in.
+
+\subsubsection*{Examples}
+
+\paragraph{Example 1 (Example from Box 1-1 in textbook):} On December 11, 2006, Jupiter was 944 million kilometers from Earth and had an angular diameter of 31.2 arcsec. From this information, calculate the actual diameter of Jupiter in kilometers.
+
+\paragraph{Solution 1:} The small angle formula is given above in equation \ref{eqn:small_angle}.
+We know $d$ and $\alpha$ and we wish to find $D$. Simply plugging in numbers yields
+$$D=\frac{\alpha d}{206,265}=\frac{(31.2)(9.44\times 10^8\;\textrm{km})}{206265}=1.42\times 10^5\;\textrm{km}$$
+
+\paragraph{Example 2:} How far away is Jupiter now (October 1st, 2012)?
+
+\paragraph{Solution 2:} Now we know $D$ ($1.42\times 10^5\;\textrm{km}$) and $\alpha$ (41.7) and we need to determine $d$. Our first step then, is to solve for $d$ algebraically. In equation \ref{eqn:small_angle} we already have $d$ on the top on the right hand side of the equation so we need to move every thing else to the other side. I am first going to flip the equation around so that $d$ is on the left hand side, and then move $\alpha$ to the other side.
+$$\frac{\cancel{\alpha} d}{206,265}\times\frac{1}{\cancel{\alpha}}=D\times\frac{1}{\alpha} \qquad \Rightarrow \qquad \frac{d}{206,265}=\frac{D}{\alpha}$$
+We now multiply both sides to get the desired equation.
+$$d=\frac{206,265\,D}{\alpha}$$
+Now it's just plug and chug:
+$$d=\frac{206,265\times1.42\times 10^5\;\textrm{km}}{41.7}=7.02\times10^8\;\textrm{km}$$
