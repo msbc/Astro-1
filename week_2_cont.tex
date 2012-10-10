@@ -1,0 +1,94 @@
+\subsection*{Celestial Sphere}
+The book does a good job of explaining this, so I am only working through example problems here. If you need an explanation of the celestial sphere then see section 2-4 of the text, also you might find Fig 2-11 useful for the homework. 
+
+\subsubsection*{Mars Example}
+{ \footnotesize *I just want to clarify that you don't need to know anything about Mars for the time being, you will learn about the planets later in the course. I only use Mars so that I am not doing problem 5 for you.}
+\vspace{12 pt}
+
+\noindent Imagine you are an astronaut on Mars, where the year is 668 Martian days long.
+\paragraph*{Question:} How long does it take the sun go around the Martian celestial sphere?
+\paragraph*{Answer:} It takes about 1 Martian year or 668 Martian days for the sun to go all the way around the 
+Martian celestial sphere.
+\paragraph*{Question:} How far does the Sun move on the Martian celestial sphere in one Martian day? 
+\paragraph*{Answer:} From the previous question we already know that the sun moves $360^\degree$ on the Martian celestial sphere in one Martian year. We can think of this as a speed that we need to convert.
+$$ \text{Angular speed}=\dfrac{360^\degree}{1 \cancel{\text{ Martian year}}}\times \dfrac{1 \cancel{\text{ Martian year}}}{668 \text{ Martian days}}=\dfrac{360^\degree}{668 \text{ Martian days}}=0.54^\degree \text{ per Martian day}$$
+So every Martian day the sun moves about half a degree on the Martian celestial sphere. Note, this is the same as saying that on Mars the sun moves about half a degree with respect to distant stars every day.
+
+\subsection*{Seasons}
+Again the text does a good job here (see section 2-5), but I wanted to point out a few things. 
+
+So, what exactly causes the seasons? Many believe that Earth's orbit around the sun is not a perfect circle, and therefore when the Earth is closer to the sun, it is summer time. When we are further away from the sun we are in winter. If there were true then then the United States in the northern hemisphere and Australia in the southern hemisphere would have winter at the same time of year. However, we know this is wrong. Australians get to enjoy summer in December. It is true that the Earth's orbit is not a perfect circle, however, its distance from the sun only deviates about $ 2\% $ of its average. This is closer to a circle then I would ever be able to draw by hand. As we will see, it is the Earth's tilt that is to blame for our cold winter months.
+
+\subsubsection*{Tilt}
+
+The Earth's axis is tilted $23.5^\degree$ with respect to its orbital plane (see Figures 2-12).
+It is this tilt, that is the origin of the seasons. There are two main effects that this tilt causes which lead to the seasons.
+\begin{itemize}
+\item Changes in the amount of daylight hours in the day (see Figures 2-12 and 2-17).
+\item Changes in angle at which sunlight hits the surface of the Earth (see Figure 2-13).
+\end{itemize}
+To understand why Earth's tilt causes these effects see the text.
+
+The second effect listed here may be more difficult to understand. Think of shooting a arrow at a target. If your arrow hits ``dead on" or perpendicular to your target then you maximize the impact and maximize the amount of energy transfered into the target. Similarly, if the sun is directly overhead (at the zenith) it maximizes the amount of heat transfered to the earth. The other extreme is a glancing blow where your arrow hits the target almost parallel to it transferring very little energy to it. Similarly, as the sun approaches the horizon it become less effective at heating the Earth.
+
+\paragraph*{The Sun's Path: The Ecliptic}\hfill \\
+The sun's path through the celestial sphere, called the Ecliptic, is caused by the tilt of the Earth's axis. This path is a circle around the celestial sphere which makes a $23.5^\degree$ angle with the celestial equator, the same angle as the Earth's tilt. See Figure 2-15 for a detailed picture and note the location of the solstices and equinoxes. The sun's position on the celestial sphere is also related to the path the sun will take on a given day at a given location (see Figure 2-16).
+
+\subsubsection*{Examples}
+\paragraph{Example 1:} How far above the southern horizon will the sun be in Santa Barbara (about $35^\degree$ north of the equator) at high noon during the \textbf{(a)} summer solstice, \textbf{(b)} vernal and autumnal equinoxes, \textbf{(c)} winter solstice?
+
+\paragraph{Answer} The most important piece of information given in this problem is the latitude, $35^\degree$ north. This gives you the angle between the zenith and the sun at noon on either equinox (see Figure \ref{fig:sun-ans}). This almost gets us the answer to part a, but what we really need is the complementary angle, $90^\degree - 35^\degree = 55^\degree$. So now that we have the elevation of the sun at noon on the equinox we can we can add $23.5^\degree$ to part b for the summer solstice, and subtract $23.5^\degree$ from part b for the winter solstice.
+\begin{figure}[h!]
+\caption{Solar Elevation}
+\label{fig:sun-ans}
+\begin{center}
+\psset{unit=1in}
+\begin{pspicture}(-2.1,-.2)(2.1,1.6)
+  \psline[linecolor=lightgray](.2,0)(.2,.2)(0,.2)
+  \psline[linecolor=lightgray](0,0)(0,1.6)
+  \psline[linecolor=lightgray](0,0)(1.5;125)
+  \psline[linestyle=dashed,linecolor=lightgray](1.5;101.5)(0,0)(1.5;148.5)
+  \psdots[linecolor=yellow,dotscale=2](1.5;101.5)(1.5;148.5)
+  \psarc{<->}(0,0){1.5}{101.5}{148.5}
+  \psdots[linecolor=yellow,dotscale=2](1.5;125)
+  \psarc{<->}(0,0){.8}{101.5}{125}
+  \rput[b](.85;113){$23.5^\degree$}
+  \psarc{<->}(0,0){.8}{125}{148.5}
+  \rput[r](.85;132){$23.5^\degree$}
+  \psarc(0,0){.5}{90}{125}
+  \rput[b](.55;107.5){$35^\degree$}
+  \psarc(0,0){.3}{125}{180}
+  \rput[r](.31;160){$55^\degree$}
+  \psarc[linestyle=dashed]{<-}(0,0){1}{148.5}{180}
+  \psarc[linestyle=dashed]{<-}(0,0){1.15}{125}{180}
+  \psarc[linestyle=dashed]{<-}(0,0){1.3}{101.5}{180}
+  \rput[b](-1,-.13){c}
+  \rput[b](-1.15,-.13){b}
+  \rput[b](-1.3,-.13){a}
+  \rput[l](1.5;100){\parbox{.5in}{\centering Summer Solstice}}
+  \rput[r](1.5;150){\parbox{.5in}{\centering Winter Solstice}}
+  \rput[b](1.7;125){Equanox}
+  \rput[l](1.6,0){ North}
+  \rput[r](-1.6,0){South }
+  \psline[linewidth=2pt](-1.6,0)(1.6,0)
+\end{pspicture}
+\end{center}
+\end{figure}
+\begin{enumerate}[(a)]
+  \item $55^\degree + 23.5^\degree=78.5^\degree$
+  \item $55^\degree$
+  \item $55^\degree - 23.5^\degree=31.5^\degree$
+\end{enumerate}
+
+\paragraph{Example 2 (Problem 2.42 in textbook):} The city of Mumbai (formerly Bombay) in India is 19$^\degree$ north of the equator. On how many days of the year, if any, is the Sun at the zenith at midday as seen from Mumbai? Explain your answer.
+\paragraph{Solution:} Because Mumbai is between the two tropics we know that the sun will past the zenith. Since Mumbai is north of the equator, the sun will move north past the zenith as the summer solstice approaches. After the summer solstice the sun will move past the zenith again. Therefore, there are two days in where the Sun at the zenith at midday.
+
+\subsection*{The Moon}
+
+I didn't talk much about the moon but Figures 3-2 and 3-8 will be helpful for the homework.
+
+\subsubsection*{Example}
+
+The moon has an angular diameter of $1/2^\degree$. If the edge of the moon just past over a distant star, what is the most the moon has to move before the star is visible again?
+
+\paragraph*{Answer:} $1/2^\degree$.
